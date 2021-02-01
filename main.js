@@ -8,7 +8,6 @@ document.addEventListener('scroll', () => {
     navbar.classList.add('navbar--dark')
   } else {
     navbar.classList.remove('navbar--dark')
-
   }
 })
 
@@ -25,6 +24,7 @@ navbarMenu.addEventListener('click', (event) => {
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 })
 
+
 // Handle click on "my work" button on home
 const homeLinkBtn = document.querySelector('.home__contact');
 homeLinkBtn.addEventListener('click', (event) => {
@@ -33,6 +33,19 @@ homeLinkBtn.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  scrollIntoView(link);
 })
+
+
+// Home section transparent when scroll down
+const homeSection = document.querySelector('.home__container');
+const homeHeight = homeSection.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  homeSection.style.opacity = 1 - window.scrollY / homeHeight;
+})
+
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
