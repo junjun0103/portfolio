@@ -45,7 +45,25 @@ document.addEventListener('scroll', () => {
 })
 
 
+// Show Arrow Button when scrolling down
+const arrowBtn = document.querySelector('.arrow__btn')
+document.addEventListener('scroll', () => {
+  console.log("test");
+  if (window.scrollY > homeHeight / 2) {
+    arrowBtn.classList.add('visible')
+  } else {
+    arrowBtn.classList.remove('visible')
+  }
+})
+
+// Handle click on the "arrow btn"
+arrowBtn.addEventListener('click', () => {
+  scrollIntoView('#home')
+})
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+
