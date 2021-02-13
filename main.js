@@ -116,11 +116,53 @@ const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"
 
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
+let selectedSection = sections[0];
 function selectNavItem(selected) {
+  console.log(selected);
   selectedNavItem.classList.remove('active');
   selectedNavItem = navItems[selected];
   selectedNavItem.classList.add('active')
+  changeBackground(selected - 1, selected, selected + 1);
+
 }
+
+// body background changing function
+function changeBackground(from, to, next) {
+  const body = document.querySelector('body');
+  body.classList.add(`background__color-${to}`)
+  body.classList.remove(`background__color-${from}`)
+  body.classList.remove(`background__color-${next}`)
+
+}
+
+// function changeBackground(from, to, next) {
+//   // if (from < 0) {
+//   //   return;
+//   //   // for (let i = 1; i < sectionIds.length; i++) {
+//   //   //   selectedSection = sections[i];
+//   //   //   selectedSection.classList.remove(`background__color-${i}`);
+//   //   // }
+//   // }
+
+//   console.log(`to${to}// next${next}`);
+
+//   selectedSection = sections[to];
+//   selectedSection.classList.add(`background__color-${to}`);
+//   selectedSection = sections[next];
+//   selectedSection.classList.remove(`background__color-${next}`);
+//   selectedSection = sections[from];
+//   selectedSection.classList.remove(`background__color-${to}`);
+
+//   // switch (selected) {
+//   //   case 0:
+//   //     selectedSection = sections[1];
+//   //     selectedSection.classList.remove('background__color-1');
+//   //   case 1:
+//   //     console.log("switch");
+//   //     selectedSection = sections[selected];
+//   //     selectedSection.classList.add('background__color-1');
+//   // }
+// }
 
 
 

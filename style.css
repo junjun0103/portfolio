@@ -4,7 +4,28 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-theme-blue: #44a3db;
+  --color-theme-blue: #0984e3;
+
+  /* --color-theme-change-0: #0984e3;
+  --color-theme-change-1: #55efc4;
+  --color-theme-change-2: #fab1a0;
+  --color-theme-change-3: #b2bec3; */
+  --color-theme-change-0: #59b3f8;
+  --color-theme-change-1: #289df6;
+  --color-theme-change-2: #0984e3;
+  --color-theme-change-3: #0768b2;
+
+  --color-theme-blue-6: #065ea2;
+
+  --color-theme-blue-7: #065591;
+  --color-theme-blue-8: #044271;
+
+  --color-theme-blue-9: #043860;
+  --color-theme-blue-10: #032540;
+
+  --color-theme-blue-11: #021c2f;
+  --color-theme-blue-12: #01090f;
+
   --color-theme-dark-gray: #939598;
 
   --color-pink: #fe918d;
@@ -34,6 +55,7 @@
 
   /* Animation */
   --animation-duration: 250ms;
+  --animation-duration-background: 400ms;
 }
 
 /* Universal tags */
@@ -45,6 +67,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   cursor: default;
+  transition: background-color var(--animation-duration-background) ease-in;
 }
 
 a {
@@ -154,7 +177,10 @@ p {
 
 /* Home */
 #home {
-  background: url('imgs/background.png') center/cover no-repeat;
+  /* background-image: linear-gradient(
+    var(--color-theme-blue-1),
+    var(--color-theme-blue-2)
+  ); */
   padding: 40px;
   padding-top: 100px;
   text-align: center;
@@ -200,6 +226,11 @@ p {
 }
 
 /* About */
+
+#about {
+  /* background-color: var(--color-theme-blue-2);
+  transition: all var(--animation-duration) ease-in; */
+}
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -263,7 +294,9 @@ p {
 
 /* Skills */
 #skills {
-  background-color: var(--color-yellow);
+  /* min-height: 100vh;
+  background-color: var(--color-theme-green-3);
+  transition: all var(--animation-duration) ease-in; */
 }
 
 .skillset {
@@ -616,4 +649,18 @@ p {
   .arrow__btn {
     font-size: 40px;
   }
+}
+
+/* background color */
+.background__color-0 {
+  background-color: var(--color-theme-change-0) !important;
+}
+.background__color-1 {
+  background-color: var(--color-theme-change-1) !important;
+}
+.background__color-2 {
+  background-color: var(--color-theme-change-2) !important;
+}
+.background__color-3 {
+  background-color: var(--color-theme-change-2) !important;
 }
