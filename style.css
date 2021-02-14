@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-theme-blue: #0984e3;
+  --color-theme-blue: #59b3f8;
 
   /* --color-theme-change-0: #0984e3;
   --color-theme-change-1: #55efc4;
@@ -31,8 +31,8 @@
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
+  --color-grey: #9e9c9c;
+  --color-light-grey: #b9b8b8;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
@@ -68,6 +68,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   cursor: default;
   transition: background-color var(--animation-duration-background) ease-in;
+  background-color: var(--color-theme-change-0);
 }
 
 a {
@@ -242,7 +243,7 @@ p {
   height: 170px;
   line-height: 170px;
   font-size: 70px;
-  color: var(--color-theme-blue);
+  color: var(--color-light-white);
   margin: auto;
   border: 1px solid var(--color-theme-blue);
   border-radius: 50%;
@@ -251,7 +252,7 @@ p {
 
 .major__title,
 .major__description {
-  color: var(--color-dark-grey);
+  color: var(--color-light-white);
 }
 
 .major__icon i {
@@ -409,7 +410,9 @@ p {
   width: 280px;
   height: 250px;
   margin: 2px;
-  background-color: var(--color-light-white);
+  /* background-color: var(--color-light-white); */
+  border: 1px solid var(--color-theme-blue);
+  border-radius: var(--size-border-radius);
 }
 .project--invisible {
   display: none;
@@ -459,6 +462,8 @@ p {
 /* Testimonial */
 #testimonials {
   background-color: var(--color-light-white);
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed; */
 }
 
 .testimonials {
@@ -653,14 +658,14 @@ p {
 
 /* background color */
 .background__color-0 {
-  background-color: var(--color-theme-change-0) !important;
+  background-color: var(--color-theme-change-0);
 }
 .background__color-1 {
-  background-color: var(--color-theme-change-1) !important;
+  background-color: var(--color-theme-change-1);
 }
 .background__color-2 {
-  background-color: var(--color-theme-change-2) !important;
+  background-color: var(--color-theme-change-2);
 }
 .background__color-3 {
-  background-color: var(--color-theme-change-2) !important;
+  background-color: var(--color-theme-change-2);
 }
